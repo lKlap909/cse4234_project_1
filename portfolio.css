@@ -1,0 +1,49 @@
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .site {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+    min-height: 100vh; /* Ensure the grid takes up at least the full viewport height */
+  }
+  
+  header {
+    grid-area: header;
+    background-color: #c83349;
+    color: #000;
+  }
+  
+  main {
+    grid-area: main;
+    background-color: #f9d5e5;
+    color: #000;
+  }
+  
+  aside {
+    grid-area: sidebar;
+    background-color: #eeac99;
+    color: #000;
+  }
+  
+  footer {
+    grid-area: footer;
+    background-color: #e06377;
+    color: #000;
+  }
+  
+  :root {
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, serif;
+  }
+  
+  .element {
+    font-family: var(--system-ui);
+  }
+  
