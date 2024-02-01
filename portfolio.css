@@ -6,6 +6,17 @@
   font-family: var(--system-ui);
 }
 
+.gradient-text {
+  background-color: red;
+  background-image: linear-gradient(to right, #fff, #000);
+  background-size: 20%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -19,6 +30,7 @@ body {
 .header-navbar li {
   display: inline-block;
   margin-right: 0.5em;
+  border-radius: 8px;
 }
 
 .header-navbar a {
@@ -72,7 +84,7 @@ h1 {
 
 header {
   grid-area: header;
-  background-color: #c83349;
+  background-image: linear-gradient(to right, #c83349, #eeac99);
   color: #000;
 }
 
