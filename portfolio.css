@@ -8,7 +8,7 @@
 
 .gradient-text {
   background-color: red;
-  background-image: linear-gradient(to right, #fff, #000);
+  background-image: linear-gradient(to right, #3393c8, #59d5c3);
   background-size: 20%;
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -27,19 +27,25 @@ body {
   margin: 10px;
 }
 
+.main h2:after {
+  content: " ";
+  display: block;
+  border: 1px solid black;
+}
+
 .header-navbar li {
   display: inline-block;
   margin-right: 0.5em;
-  border-radius: 8px;
 }
 
 .header-navbar a {
   display: block;
   padding: 0.5em;
-  background-color: #dddddd;
+  background-color: #59d5c3;
   color: #000;
   font-weight: bold;
   font-size: 16px;
+  border-radius: 10px;
 }
 
 .header-navbar a:hover {
@@ -74,12 +80,34 @@ h1 {
 
 .site {
   display: grid;
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 2fr 4fr 2fr;
   grid-template-areas:
     "header"
     "main"
     "footer";
   min-height: 100vh;
+}
+
+.media-bar {
+  list-style-type: none;
+  margin: 10x;
+  padding: 1.5;
+}
+
+.media-bar li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.media-bar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.media-bar a:hover {
+  color: #c83349;
 }
 
 header {
@@ -90,13 +118,13 @@ header {
 
 main {
   grid-area: main;
-  background-color: #f9f9f9;
+  background-color: #f9d5e5;
   color: #333333;
 }
 
 footer {
   grid-area: footer;
-  background-color: #e06377;
+  background-image: linear-gradient(to right, #eeac99, #c83349);
   color: #000;
   display: flex;
   justify-content: center;
