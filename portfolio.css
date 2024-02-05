@@ -6,6 +6,21 @@
   font-family: var(--system-ui);
 }
 
+.site {
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  min-height: 100vh;
+}
+
+section {
+  padding: 0px 10px;
+}
+
+
 .gradient-text {
   background-color: red;
   background-image: linear-gradient(in hsl longer hue, #e66465, #9198e5);
@@ -17,6 +32,16 @@
   -moz-text-fill-color: transparent;
 }
 
+header {
+  grid-area: header;
+  background-image: linear-gradient(to right, #c83349, #eeac99);
+  color: #000;
+}
+
+h1 {
+  padding: 0px 10px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -25,13 +50,6 @@ body {
 .header-navbar {
   list-style-type: none;
   margin: 10px;
-}
-
-
-.main h2:after {
-  content: " ";
-  display: block;
-  border: 1px solid black;
 }
 
 .header-navbar li {
@@ -64,6 +82,27 @@ body {
   font-weight: bold;
 }
 
+main {
+  grid-area: main;
+  background-color: #f9d5e5;
+  color: #000;
+}
+
+.main h2:after {
+  content: " ";
+  display: block;
+  border: 1px solid black;
+}
+
+footer {
+  grid-area: footer;
+  background-image: linear-gradient(to right, #eeac99, #c83349);
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .footer-navbar {
   list-style-type: none;
   margin: 0;
@@ -72,7 +111,7 @@ body {
 
 .footer-navbar li {
   display: inline;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .footer-navbar a {
@@ -86,20 +125,6 @@ body {
   color: #c83349;
 }
 
-h1 {
-  padding: 0px 10px;
-}
-
-.site {
-  display: grid;
-  grid-template-rows: 1fr 4fr 1fr;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  min-height: 100vh;
-}
-
 .media-bar {
   list-style-type: none;
   margin: 10x;
@@ -108,7 +133,7 @@ h1 {
 
 .media-bar li {
   display: inline;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .media-bar a {
@@ -120,31 +145,6 @@ h1 {
 
 .media-bar a:hover {
   color: #c83349;
-}
-
-header {
-  grid-area: header;
-  background-image: linear-gradient(to right, #c83349, #eeac99);
-  color: #000;
-}
-
-main {
-  grid-area: main;
-  background-color: #f9d5e5;
-  color: #000;
-}
-
-footer {
-  grid-area: footer;
-  background-image: linear-gradient(to right, #eeac99, #c83349);
-  color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-section {
-  padding: 0px 10px;
 }
 
 @media (max-width: 768px) {
